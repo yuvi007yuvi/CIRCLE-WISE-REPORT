@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e0ffe0; /* Light green */
+}
+
+tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Very light grey */
+}
+
+tr:hover {
+    background-color: #c8e6c9; /* Lighter green on hover */
+}
+
+h1 {
+    color: #FF5722; /* Orange */
+}
+
+
+button {
+    background-color: #00BCD4; /* Cyan */
+}
+
+button:hover {
+    background-color: #0097A7; /* Darker Cyan */
+}
+
+.upload-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="file"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .upload-section {
+        flex-direction: column;
+    }
+
+    input[type="file"],
+    button {
+        width: 100%;
+    }
+}
+
+.overall-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overall-summary-table th,
+.overall-summary-table td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+.overall-summary-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.overall-summary-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.overall-summary-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.overall-summary-table .total-row {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+.overall-summary-table .total-row td {
+    font-size: 1.1em;
+    color: #333;
+}
