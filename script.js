@@ -152,7 +152,7 @@ function renderReport(processedData, containerId) {
 
     const overallThead = document.createElement('thead');
     const overallHeaderRow = document.createElement('tr');
-    ['Circle', 'Total Households', 'Covered Households', 'Percentage(%)'].forEach(text => {
+    ['Circle', 'Total Wards', 'Total Households', 'Covered Households', 'Percentage(%)'].forEach(text => {
         const th = document.createElement('th');
         th.textContent = text;
         overallHeaderRow.appendChild(th);
@@ -175,6 +175,15 @@ function renderReport(processedData, containerId) {
         const tdCircle = document.createElement('td');
         tdCircle.textContent = circleName;
         tr.appendChild(tdCircle);
+
+        let circleWardCount = 0;
+        for (const zone in processedData[circleName]) {
+            circleWardCount += Object.keys(processedData[circleName][zone]).length;
+        }
+        const tdWardCount = document.createElement('td');
+        tdWardCount.textContent = circleWardCount;
+        tr.appendChild(tdWardCount);
+
         const tdTotal = document.createElement('td');
         tdTotal.textContent = circleTotalSum;
         tr.appendChild(tdTotal);
@@ -195,7 +204,7 @@ function renderReport(processedData, containerId) {
     totalRow.classList.add('total-row');
     const totalLabel = document.createElement('td');
     totalLabel.textContent = 'Overall Total';
-    totalLabel.colSpan = 1; // Span across Circle column
+    totalLabel.colSpan = 2; // Span across Circle and Total Wards columns
     totalRow.appendChild(totalLabel);
     const totalSumCell = document.createElement('td');
     totalSumCell.textContent = overallTotalSum;
@@ -240,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '66-Keshighat',
         '70-Biharipur'
     ];
-    
+
     const circle2Wards = [
         '08-Atas',
         '13-Sunrakh',
