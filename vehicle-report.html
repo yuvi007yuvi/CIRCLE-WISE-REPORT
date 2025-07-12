@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zonal Coverage Report</title>
+    <title>Vehicle-wise Coverage Report</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
         <header class="dashboard-header">
             <div class="logo-container">
                 <img src="./LOGO.png" alt="Company Logo">
-                <h1>CIRCLE Coverage Report</h1>
+                <h1>VEHICLE Coverage Report</h1>
             </div>
             <div class="user-profile">
                 <i class="fas fa-user-circle"></i>
@@ -25,8 +25,8 @@
                 <nav class="sidebar-nav">
                     <h3>Menu</h3>
                     <ul>
-                        <li class="active"><a href="index.html"><i class="fas fa-chart-pie"></i> Circle Report</a></li>
-                        <li><a href="./vehicle-report.html"><i class="fas fa-truck"></i> Vehicle Report</a></li>
+                        <li><a href="index.html"><i class="fas fa-chart-pie"></i> Circle Report</a></li>
+                        <li class="active"><a href="./vehicle-report.html"><i class="fas fa-truck"></i> Vehicle Report</a></li>
                     </ul>
                 </nav>
                 <div class="upload-section">
@@ -40,7 +40,7 @@
                 <div class="print-header" style="display: none;">
                     <div class="logo-container">
                         <img src="./LOGO.png" alt="Company Logo">
-                        <h1>CIRCLE Coverage Report</h1>
+                        <h1>VEHICLE Coverage Report</h1>
                     </div>
                     <p>Generated on <span id="printDate"></span></p>
                 </div>
@@ -55,11 +55,11 @@
                 <div id="printOptions" class="print-options">
                     <h3>Print Options</h3>
                     <button id="printAll" class="print-option">Print All Circles</button>
-                    <button id="printSummary" class="print-option">Print Summary Only</button>
+                    <button id="printByCircle" class="print-option">Print By Circle</button>
                 </div>
             </section>
         </main>
     </div>
-    <script src="script.js"></script>
+    <script src="vehicle-report.js"></script>
 </body>
 </html>
